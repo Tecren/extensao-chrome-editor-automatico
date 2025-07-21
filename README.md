@@ -100,6 +100,11 @@ chrome-text-editor-extension/
 
 ## Galeria do projeto
 
+![Tela Inicial](\src\imagens\1-tela-inicial.png)
+
+![Tela do Modelo](\src\imagens\2-tela-modelo.png)
+
+![Tela da Assinatura](\src\imagens\3-tela-assinatura.png)
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
