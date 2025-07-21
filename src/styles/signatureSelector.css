@@ -1,0 +1,231 @@
+.signature-selector {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.signature-saction {
+  max-height: 300px;
+}
+
+.document-final {
+  padding: 16px;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.document-final h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.final-document {
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.final-document .ql-editor {
+  max-height: 250px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 0;
+  white-space: pre-wrap;
+}
+
+.incomplete-warning {
+  padding: 16px;
+  background: #fed7d7;
+  border-left: 4px solid #f56565;
+  margin: 16px;
+  border-radius: 4px;
+}
+
+.incomplete-warning p {
+  color: #c53030;
+  font-size: 13px;
+  margin: 0;
+}
+
+.signature-section {
+  flex: 1;
+  padding: 16px;
+}
+
+.signature-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.employees-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.employee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.employee-item:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+.employee-item.selected {
+  border-color: #667eea;
+  background: #ebf4ff;
+}
+
+.employee-info {
+  flex-direction: column;
+  gap: 2px;
+}
+
+.employee-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.employee-position {
+  font-size: 12px;
+  color: #718096;
+}
+
+.selection-indicator {
+  font-size: 18px;
+  color: #667eea;
+}
+
+.signature-confirmation {
+  padding: 16px;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.signature-confirmation p {
+  font-size: 14px;
+  color: #2d3748;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.finish-button {
+  width: 100%;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.finish-button:hover {
+  transform: translateY(-1px);
+}
+
+.document-summary {
+  border-top: 1px solid #e1e5e9;
+  padding: 16px;
+  background: #f8f9fa;
+}
+
+.document-summary h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.summary-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.summary-field:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.field-value {
+  font-size: 13px;
+  color: #2d3748;
+  font-weight: 400;
+  max-width: 200px;
+  text-align: right;
+  word-break: break-word;
+}
+
+.preview-document {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.preview-document h1,
+.preview-document h2,
+.preview-document h3 {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  margin: 1em 0 0.5em;
+}
+
+.preview-document p {
+  margin: 0 0 1em;
+}
+
+.preview-document ul {
+  padding-left: 1.2em;
+}
+
+.preview-document li {
+  margin-bottom: 0.5em;
+}

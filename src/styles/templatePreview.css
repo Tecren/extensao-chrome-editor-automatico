@@ -1,0 +1,167 @@
+.template-preview {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.preview-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.template-document {
+  background: #f8f9fa;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  color: #2d3748;
+
+  max-width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.template-content {
+  max-width: 400px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.template-document img {
+  max-width: 100%;
+  height: auto;
+}
+
+.template-document p {
+  text-indent: 2em;
+  margin-bottom: 1em;
+}
+
+.fields-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 3px solid #667eea;
+}
+
+.field-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.field-shortcut {
+  font-size: 11px;
+  color: #718096;
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.actions {
+  padding: 16px;
+  border-top: 1px solid #e1e5e9;
+  background: #f8f9fa;
+}
+
+.edit-button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.edit-button:hover {
+  transform: translateY(-1px);
+}
+
+.instructions {
+  padding: 16px;
+  background: #f0f4f8;
+  border-top: 1px solid #e1e5e9;
+}
+
+.instructions h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.instructions ol {
+  padding-left: 16px;
+  color: #718096;
+  font-size: 13px;
+}
+
+.instructions li {
+  margin-bottom: 4px;
+}
+
+.preview-document {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.preview-document h1,
+.preview-document h2,
+.preview-document h3 {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  margin: 1em 0 0.5em;
+}
+
+.preview-document p {
+  margin: 0 0 1em;
+}
+
+.preview-document ul {
+  padding-left: 1.2em;
+}
+
+.preview-document li {
+  margin-bottom: 0.5em;
+}

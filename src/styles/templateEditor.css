@@ -1,0 +1,170 @@
+/*NÃO USADO*/
+.template-editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.progress {
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.progress-info {
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.editor-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.document-preview h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.quill-editor {
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  user-select: text;
+  cursor: text;
+}
+
+.quill-editor .ql-editor {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 16px;
+}
+
+.fields-status h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.field-status {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border-left: 4px solid #e2e8f0;
+}
+
+.field-status.preenchido {
+  background: #f0fff4;
+  border-left-color: #48bb78;
+}
+
+.field-status.pendente {
+  background: #fffaf0;
+  border-left-color: #ed8936;
+}
+
+.field-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-value {
+  font-size: 13px;
+  color: #718096;
+  font-style: italic;
+}
+
+.field-indicator {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.field-status.preenchido .field-indicator {
+  color: #48bb78;
+}
+
+.field-status.pendente .field-indicator {
+  color: #ed8936;
+}
+
+.preview-scroll {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  pointer-events: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.preview-quill .ql-editor {
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: normal;
+  word-wrap: break-word;
+  color: #333;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.preview-quill .ql-editor h1,
+.preview-quill .ql-editor h2,
+.preview-quill .ql-editor h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+}
+
+.preview-quill .ql-editor p {
+  margin: 0 0 1em;
+}
+
+.finalize-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.finish-button {
+  background-color: #667eea;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.finish-button:hover {
+  background-color: #5a67d8;
+}

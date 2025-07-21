@@ -1,0 +1,32 @@
+@media (max-width: 420px) {
+  .app {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .shortcuts-info ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+.final-document {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.final-document .ql-editor {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.signature-section {
+  position: relative;
+  z-index: 1;
+}
