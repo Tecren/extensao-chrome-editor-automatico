@@ -192,9 +192,9 @@ document.addEventListener('click', () => {
 });
 
 
-//atalhos de teclado
+// atalhos de teclado
 document.addEventListener('keydown', (event) => {
-  if (event.ctrlKey && event.altKey) {
+  if (event.ctrlKey && event.shiftKey) {
     let fieldId = '';
     switch (event.key) {
       case '1': fieldId = 'nome'; break;
@@ -207,5 +207,4 @@ document.addEventListener('keydown', (event) => {
     handleGetSelectedText(fieldId);
   }
 });
-
 export {};
