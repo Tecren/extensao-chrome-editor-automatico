@@ -43,6 +43,10 @@ chrome.commands.onCommand.addListener(async (command) => {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   console.log('Mensagem recebida no background:', message);
 
+  if (message.action === 'openExtensionPopup') {
+    chrome.runtime.openOptionsPage();
+  }
+
   switch (message.type) {
     case 'FILL_FIELD':
       handleFillField(message.payload);

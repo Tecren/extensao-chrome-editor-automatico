@@ -1,7 +1,14 @@
-console.log('Content script carregado');
+
+console.log('[Extensão] content.js carregado em', window.location.href);
+
+if (window.top !== window.self) {
+  console.log('Executando dentro de um iframe');
+} else {
+  console.log('Executando na janela principal');
+}
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log('Mensagem recebida no content script:', message);
+  console.log('[Extensão] Mensagem recebida:', message);
 
   if (message.type === 'GET_SELECTED_TEXT') {
     handleGetSelectedText(message.fieldId);
@@ -10,7 +17,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 function handleGetSelectedText(fieldId: string, selectedTextParam?: string) {
   const selectedText = selectedTextParam || getSelectedText();
-  
   if (!selectedText) {
     showNotification('Nenhum texto selecionado', 'error');
     return;
@@ -38,7 +44,12 @@ function getFieldName(fieldId: string): string {
     'nome': 'Nome',
     'cpf': 'CPF',
     'documento': 'Documento',
-    //adicione mais campos aqui
+    'processo': 'Processo',
+    'periodoBloqueio': 'Período de Bloqueio',
+    'rg': 'RG',
+    'certificado': 'Certificado',
+    'endereco': 'Endereço',
+    'municipio': 'Município'
   };
   return fieldNames[fieldId] || fieldId;
 }
@@ -119,7 +130,7 @@ function highlightSelection() {
   selection.removeAllRanges();
 }
 
-//dropdown
+// dropdown com clique direito
 document.addEventListener('contextmenu', (e) => {
   const selectedText = getSelectedText();
   if (!selectedText) return;
@@ -149,7 +160,7 @@ function showDropdown(x: number, y: number, selectedText: string) {
     min-width: 160px;
   `;
 
-  const campos: { id: string, label: string }[] = [
+  const campos = [
     { id: 'nome', label: '<<nome>>' },
     { id: 'cpf', label: '<<cpf>>' },
     { id: 'documento', label: '<<documento>>' },
@@ -158,8 +169,7 @@ function showDropdown(x: number, y: number, selectedText: string) {
     { id: 'rg', label: '<<rg>>' },
     { id: 'certificado', label: '<<certificado>>' },
     { id: 'endereco', label: '<<endereco>>' },
-    { id: 'municipio', label: '<<municipio>>' },
-    //adicione mais campos aqui
+    { id: 'municipio', label: '<<municipio>>' }
   ];
 
   campos.forEach(({ id, label }) => {
@@ -191,8 +201,7 @@ document.addEventListener('click', () => {
   if (existing) existing.remove();
 });
 
-
-// atalhos de teclado
+// Atalhos de teclado: Ctrl+Shift+N
 document.addEventListener('keydown', (event) => {
   if (event.ctrlKey && event.shiftKey) {
     let fieldId = '';
